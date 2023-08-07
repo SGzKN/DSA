@@ -7,11 +7,11 @@ class Diagonal_sum {
         int m = a[0].length;//no. of columns
         int sum = 0;
         for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
-                if((i==j) || (i+j == n-1)){
-                    sum += a[i][j];
-                }
-            }
+            //main diagonal
+            sum += a[i][i] ;
+            
+            //second diagonal
+            sum += a[i][n-1-i];
         }
         
         return sum;
